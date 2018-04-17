@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import News from './News/News'
+import Sidenews from './News/Sidenews'
 
 class App extends Component {
   constructor(props) {
@@ -13,6 +14,10 @@ class App extends Component {
       news2: {
         type: 'everything',
         query: 'domains=techcrunch.com&language=en'
+      },
+      news3: {
+        type: 'everything',
+        query: 'domains=comicbookmovie.com&language=en'
       }
     }
   }
@@ -24,6 +29,7 @@ class App extends Component {
         </header>
         <News news={this.state.news1}/>
         <News news={this.state.news2}/>
+        <Sidenews news={this.state.news3}/>
       </div>
     );
   }
